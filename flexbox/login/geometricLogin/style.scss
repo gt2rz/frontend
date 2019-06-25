@@ -1,0 +1,149 @@
+$font-stack:'Segoe UI',
+Tahoma,
+Geneva,
+Verdana,
+sans-serif;
+$primary-bg-color: #3d8ee9;
+$second-bg-color:#fff;
+
+$text-primary-color:#fff;
+$text-second-color:#666;
+
+@mixin transform($property) {
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: $font-stack;
+    overflow: hidden;
+}
+
+.login-page {
+    display: flex;
+    min-width: 100%;
+
+    button {
+        min-height: 60px;
+        width: 12vw;
+        border-radius: 80px;
+        font-weight: bold;
+        font-size: 1em;
+        margin-top: 4vh;
+        border: none;
+    }
+}
+
+.section {
+    margin: 0;
+    padding: 0;
+    max-width: 50% !important;
+    display: flex;
+
+    .circle {
+        position: relative;
+        background: none;
+        width: 12vw;
+        height: 12vw;
+        z-index: 1010;
+    }
+
+    h1 {
+        margin: 0;
+    }
+
+    hr {
+        width: 32%;
+        height: 5px;
+        border: none;
+    }
+}
+
+#info {
+    background-color: $primary-bg-color;
+    color: $second-bg-color;  
+    
+    .content {
+        padding: 26vh 12vw;
+              
+        hr {
+            background-color: $second-bg-color;
+            margin: 10px 0;
+        }
+    
+        p {
+            margin-top: 6vh;
+            text-align: justify;
+        }
+    
+        .circle {
+            border: 4vw solid $second-bg-color;
+            border-radius: 20vw;
+            top: -3vw;
+            right: -26vw;
+        }
+
+        button{
+            border: 1px solid $second-bg-color;
+            background-color: $primary-bg-color;
+            color: $text-primary-color;
+        }
+    }
+}
+
+#signin {
+    background-color: $second-bg-color;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 26vh 0vw 0 15vw;
+    
+        form {
+            height: 40px;
+            margin: 0 0 2vh 0;
+            display: flex;
+            flex-direction: column;
+        }
+    
+        hr {
+            background-color: $primary-bg-color;
+            margin-bottom: 4vh;
+        }
+    
+        label {
+            color: $text-second-color;
+        }
+    
+        h1{
+            color: $text-second-color;
+            text-align: center
+        }
+    
+        input {
+            margin: 0.5vh 0 2vh 0;
+            min-height: 30px;
+        }
+    
+        .circle{
+            border: 4vw solid #efefef;
+            border-radius: 5vw;
+            top: -26vh;
+            right: -24vw;
+            @include transform(rotate(40deg));
+        }
+
+        button{
+            background-color: $primary-bg-color;
+            color: $text-primary-color;
+            align-self: center;
+        }
+    }
+}
