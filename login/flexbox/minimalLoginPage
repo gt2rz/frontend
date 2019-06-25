@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Login Page</title>
+    <style>
+        html,
+        body {
+            min-height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden;
+        }
+
+        .login-page {
+            display: flex;
+            margin: 0;
+            min-width: 100%;
+        }
+
+        .section {
+            margin: 0;
+            padding: 0;
+            max-width: 50% !important;
+            display: flex;
+        }
+
+        .login-page-info {
+            background-color: #3d8ee9;
+            color: #fff;
+        }
+
+        .login-page-info-text {
+            padding: 26vh 12vw;
+        }
+
+        .login-page-info-text h1 {
+            margin: 0;
+        }
+
+        .login-page-info-text hr {
+            background-color: #fff;
+            width: 32%;
+            height: 5px;
+            border: none;
+            margin: 10px 0;
+        }
+
+        .login-page-info-text p {
+            margin-top: 6vh;
+            text-align: justify;
+        }
+
+        .login-page-button {
+            min-height: 60px;
+            width: 12vw;
+            border-radius: 80px;
+        }
+
+        #know-more {
+            margin-top: 4vh;
+            border: 1px solid #fff;
+            background-color: #3d8ee9;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+        }
+
+        .login-page-info-circle {
+            border: 4vw solid #fff;
+            background-color: #3d8ee9;
+            border-radius: 20vw;
+            top: -3vw;
+            width: 12vw;
+            height: 12vw;
+            position: relative;
+            right: -26vw;
+            z-index: 100;
+        }
+
+        .login-page-signin {
+            z-index: 1000;
+            background-color: #fff;
+            display: flex;
+        }
+
+        .login-page-signin-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 26vh 0vw 0 15vw;
+        }
+
+        .login-page-signin-title {
+            color: #666;
+            margin: 0;
+            text-align: center
+        }
+
+        .login-page-signin-content hr {
+            background-color: #3d8ee9;
+            width: 25%;
+            height: 5px;
+            border: none;
+            margin-bottom: 4vh;
+        }
+
+        .login-page-signin-content form {
+            height: 40px;
+            margin: 0 0 2vh 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .login-page-signin-input {
+            margin-bottom: 2vh;
+            min-height: 30px;
+        }
+
+        .login-page-signin-circle {
+            border: 4vw solid #efefef;
+            background: none;
+            border-radius: 5vw;
+            top: -26vh;
+            width: 12vw;
+            height: 12vw;
+            position: relative;
+            right: -24vw;
+            z-index: 1010;
+            transform: rotate(40deg)
+        }
+
+        #accept {
+            margin-top: 4vh;
+            border: none;
+            background-color: #3d8ee9;
+            color: #fff;
+            font-weight: bold;
+            font-size: 1em;
+            align-self: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-page">
+        <div class="login-page-info section">
+            <div class="login-page-info-text">
+                <h1>Welcome to MDM</h1>
+                <hr>
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, alias excepturi, architecto
+                    praesentium consectetur ut quas officiis similique odio sed inventore, ducimus maxime quam suscipit.
+                    Esse consequatur expedita dolore nihil?
+                </p>
+                <button class="login-page-button" id="know-more">Know More</button>
+                <div class="login-page-info-circle"></div>
+            </div>
+        </div>
+        <div class="login-page-signin section">
+            <div class="login-page-signin-content">
+                <h1 class="login-page-signin-title">Signin</h1>
+                <hr>
+                <form action="#" method="post">
+                    <label for="username">Username</label>
+                    <input type="text" class="login-page-signin-input" id="username">
+                    <label for="password">Password</label>
+                    <input type="password" class="login-page-signin-input" id="password">
+                    <button class="login-page-button" id="accept" type="submit">Login</button>
+                </form>
+                <div class="login-page-signin-circle"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
