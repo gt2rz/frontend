@@ -8,11 +8,11 @@ body {
   overflow: hidden;
 }
 
-.login-page {
+#root {
   display: flex;
   min-width: 100%;
 }
-.login-page button {
+#root button {
   min-height: 60px;
   width: 12vw;
   border-radius: 80px;
@@ -22,23 +22,23 @@ body {
   border: none;
 }
 
-.section {
+section {
   margin: 0;
   padding: 0;
   max-width: 50% !important;
   display: flex;
 }
-.section .circle {
+section .circle {
   position: relative;
   background: none;
   width: 12vw;
   height: 12vw;
   z-index: 1010;
 }
-.section h1 {
+section h1 {
   margin: 0;
 }
-.section hr {
+section hr {
   width: 32%;
   height: 5px;
   border: none;
