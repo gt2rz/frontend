@@ -61,23 +61,23 @@ section {
   background: #000 url("img/darkness-as-me.jpg") no-repeat center;
 }
 
-#content, #content-2 {
+#content, #content-2, #content-3 {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-top: 16vh;
 }
-#content h1, #content-2 h1 {
+#content h1, #content-2 h1, #content-3 h1 {
   font-size: 6.5em;
   padding: 0;
   margin: 0;
 }
-#content h3, #content-2 h3 {
+#content h3, #content-2 h3, #content-3 h3 {
   color: #8a8a8a;
   padding: 0;
   margin: 0;
 }
-#content button, #content-2 button {
+#content button, #content-2 button, #content-3 button {
   background-color: #f00;
   color: #fff;
   border: none;
@@ -87,15 +87,26 @@ section {
   font-size: 1.2em;
   font-stretch: ultra-expanded;
 }
-#content button:hover, #content-2 button:hover {
+#content button:hover, #content-2 button:hover, #content-3 button:hover {
   box-shadow: 2px 2px 5px #a1a1a1;
   cursor: pointer;
 }
-#content p, #content-2 p {
+#content p, #content-2 p, #content-3 p {
   margin: 0;
   padding: 5vw;
   font-size: 1.5em;
   text-align: center;
+  color: #333;
+}
+#content #home, #content-2 #home, #content-3 #home {
+  position: absolute;
+  top: 2vh;
+  right: 5vw;
+  text-decoration: none;
+  color: #8a8a8a;
+}
+#content #home:hover, #content-2 #home:hover, #content-3 #home:hover {
+  border-bottom: 2px solid #f00;
   color: #333;
 }
 
