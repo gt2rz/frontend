@@ -1,0 +1,98 @@
+$font-stack: 'Josefin Sans', sans-serif;
+$primary-bg-color:#000;
+$second-bg-color:#fff;  
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-family: $font-stack;
+    overflow: hidden;
+}
+
+#root {
+    display: flex;
+    min-width: 100%;  
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    max-width: 50% !important;
+    width:50%;
+    display: flex;
+}
+
+#navigation {
+    background: #000 url('img/darkness.jpeg') no-repeat right; 
+    color: $second-bg-color; 
+    align-items:flex-end;
+
+    .content{
+        width:100%;
+        align-items:flex-end;
+        display: flex;
+        flex-direction: row;
+        justify-content:space-between;
+
+        h1{    
+            padding:0;
+            margin:0; 
+            font-size: 22em;
+            position:relative;
+            right:-4vw;
+            bottom:-16vh;
+            z-index:1000;
+        }  
+
+        span{
+            padding:2vw;
+        }
+
+        a{
+            color:#fff;
+            text-decoration: none;
+        }
+    } 
+
+}
+
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top:16vh;
+
+    h1{
+        font-size:6.5em;
+        padding:0;
+        margin:0;
+    }
+
+    h3{
+        color:rgb(138, 138, 138);
+        padding:0;
+        margin:0;
+    }
+
+    button{
+        background-color: #f00;
+        color:#fff;
+        border:none;
+        width:16vw;
+        height: 5vh;
+        font-weight: bold;
+        font-size:1.2em;
+        font-stretch: ultra-expanded;
+    }
+
+    p{
+        margin:0;
+        padding:5vw;
+        font-size:1.5em;
+        text-align: center;
+        color:#333;
+    }
+}
