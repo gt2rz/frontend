@@ -16,7 +16,7 @@ body {
 
 #root {
     display: flex;
-    min-width: 100%;  
+    min-width: 100%;      
 }
 
 section {
@@ -47,6 +47,8 @@ section {
             right:-4vw;
             bottom:-12vh;
             z-index:1000;
+            animation-name: number-animate;
+            animation-duration: 2s;
         }  
 
         span{
@@ -85,12 +87,16 @@ section {
         font-size:6.5em;
         padding:0;
         margin:0;
+        animation-name: title-animate;
+        animation-duration: 2s;
     }
 
     h3{
         color:$third-color;
         padding:0;
         margin:0;
+        animation-name: subtitle-animate;
+        animation-duration: 3s;
     }
 
     button{
@@ -101,12 +107,17 @@ section {
         height: 5vh;
         font-weight: bold;
         font-size:1.2em;
-        font-stretch: ultra-expanded;
+        transition: width 0.2s, background-color 0.2s;
+        transition-timing-function: ease;
+        animation-name: button-animate;
+        animation-duration: 5s;
     }
 
     button:hover{
-        box-shadow: 2px 2px 5px #a1a1a1;
+        box-shadow: 2px 2px 5px #666666;
         cursor: pointer;
+        width:18vw;
+        background-color:#920b0b;
     }
 
     p{
@@ -115,6 +126,8 @@ section {
         font-size:1.5em;
         text-align: center;
         color:#333;
+        animation-name: content-animate;
+        animation-duration: 4s;
     }
 
     #home{
@@ -122,8 +135,9 @@ section {
         top:2vh;
         right:5vw;
         text-decoration: none;
-        color:$third-color;
+        color:$third-color;        
     }
+
     #home:hover{
         border-bottom: 2px solid $button-bg-color;
         color:#333;
@@ -134,4 +148,39 @@ section {
     h1{
         font-size:6em;
     }    
+}
+
+@keyframes title-animate {
+    from {color: #fff;}
+    to {color: $primary-bg-color;}
+}
+
+@keyframes subtitle-animate {
+    from {color: #fff;}
+    to {color: $third-color;}
+}
+
+@keyframes content-animate {
+    from {color: #fff;}
+    to {color: #333;}
+}
+
+@keyframes button-animate {
+    from {
+        background-color: #fff;
+        color: #fff;
+    }
+    to {
+        background-color: #f00;
+        color: #fff;
+    }
+}
+
+@keyframes number-animate{
+    from{
+        right:-20vw;
+    }
+    to{
+        right:-4vw;
+    }
 }

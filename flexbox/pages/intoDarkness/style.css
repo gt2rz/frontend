@@ -41,6 +41,8 @@ section {
   right: -4vw;
   bottom: -12vh;
   z-index: 1000;
+  animation-name: number-animate;
+  animation-duration: 2s;
 }
 #navigation .content span, #navigation-2 .content span, #navigation-3 .content span {
   padding: 2vw;
@@ -71,11 +73,15 @@ section {
   font-size: 6.5em;
   padding: 0;
   margin: 0;
+  animation-name: title-animate;
+  animation-duration: 2s;
 }
 #content h3, #content-2 h3, #content-3 h3 {
   color: #8a8a8a;
   padding: 0;
   margin: 0;
+  animation-name: subtitle-animate;
+  animation-duration: 3s;
 }
 #content button, #content-2 button, #content-3 button {
   background-color: #f00;
@@ -85,11 +91,16 @@ section {
   height: 5vh;
   font-weight: bold;
   font-size: 1.2em;
-  font-stretch: ultra-expanded;
+  transition: width 0.2s, background-color 0.2s;
+  transition-timing-function: ease;
+  animation-name: button-animate;
+  animation-duration: 5s;
 }
 #content button:hover, #content-2 button:hover, #content-3 button:hover {
-  box-shadow: 2px 2px 5px #a1a1a1;
+  box-shadow: 2px 2px 5px #666666;
   cursor: pointer;
+  width: 18vw;
+  background-color: #920b0b;
 }
 #content p, #content-2 p, #content-3 p {
   margin: 0;
@@ -97,6 +108,8 @@ section {
   font-size: 1.5em;
   text-align: center;
   color: #333;
+  animation-name: content-animate;
+  animation-duration: 4s;
 }
 #content #home, #content-2 #home, #content-3 #home {
   position: absolute;
@@ -112,6 +125,49 @@ section {
 
 #content-2 h1 {
   font-size: 6em;
+}
+
+@keyframes title-animate {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #000;
+  }
+}
+@keyframes subtitle-animate {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #8a8a8a;
+  }
+}
+@keyframes content-animate {
+  from {
+    color: #fff;
+  }
+  to {
+    color: #333;
+  }
+}
+@keyframes button-animate {
+  from {
+    background-color: #fff;
+    color: #fff;
+  }
+  to {
+    background-color: #f00;
+    color: #fff;
+  }
+}
+@keyframes number-animate {
+  from {
+    right: -20vw;
+  }
+  to {
+    right: -4vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
