@@ -4,6 +4,7 @@ Geneva,
 Verdana,
 sans-serif;
 $primary-bg-color: #3d8ee9;
+$primary-bg-hover-color:#5e9fe9;
 $second-bg-color:#fff;
 
 $text-primary-color:#fff;
@@ -92,6 +93,12 @@ body {
         button{
             border: 1px solid $second-bg-color;
             background-color: $primary-bg-color;
+            color: $text-primary-color;
+        }
+
+        button:hover{
+            border: 1px solid $second-bg-color;
+            background-color: #5e9fe9;
             color: $text-primary-color;
         }
     }

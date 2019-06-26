@@ -70,6 +70,11 @@ body {
   background-color: #3d8ee9;
   color: #fff;
 }
+#info .content button:hover {
+  border: 1px solid #fff;
+  background-color: #5e9fe9;
+  color: #fff;
+}
 
 #signin {
   background-color: #fff;
