@@ -20,6 +20,7 @@ body {
   font-size: 1em;
   margin-top: 4vh;
   border: none;
+  cursor: pointer;
 }
 
 section {
@@ -119,6 +120,10 @@ section hr {
   background-color: #3d8ee9;
   color: #fff;
   align-self: center;
+}
+#signin .content button:hover {
+  background-color: #2b7fde;
+  box-shadow: 2px 2px 5px #a1a1a1;
 }
 
 /*# sourceMappingURL=style.css.map */
