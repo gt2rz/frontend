@@ -49,6 +49,9 @@ section {
   color: #fff;
   text-decoration: none;
 }
+#navigation .content a:hover {
+  border-bottom: 2px solid #f00;
+}
 
 #content {
   display: flex;
@@ -75,6 +78,10 @@ section {
   font-weight: bold;
   font-size: 1.2em;
   font-stretch: ultra-expanded;
+}
+#content button:hover {
+  box-shadow: 2px 2px 5px #a1a1a1;
+  cursor: pointer;
 }
 #content p {
   margin: 0;

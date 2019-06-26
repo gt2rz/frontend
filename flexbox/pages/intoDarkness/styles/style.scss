@@ -55,6 +55,11 @@ section {
             color:#fff;
             text-decoration: none;
         }
+
+        a:hover{
+            border-bottom: 2px solid #f00;
+            // font-size: 1.1em;
+        }
     } 
 
 }
@@ -86,6 +91,11 @@ section {
         font-weight: bold;
         font-size:1.2em;
         font-stretch: ultra-expanded;
+    }
+
+    button:hover{
+        box-shadow: 2px 2px 5px #a1a1a1;
+        cursor: pointer;
     }
 
     p{
