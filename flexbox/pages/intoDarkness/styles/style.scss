@@ -1,6 +1,7 @@
 $font-stack: 'Josefin Sans', sans-serif;
 $primary-bg-color:#000;
 $second-bg-color:#fff;  
+$button-bg-color:#f00;
 
 html,
 body {
@@ -25,8 +26,8 @@ section {
     display: flex;
 }
 
-#navigation {
-    background: #000 url('img/darkness.jpeg') no-repeat right; 
+#navigation, #navigation-2, #navigation-3 {
+    background: #000 url('img/darkness.jpg') no-repeat right; 
     color: $second-bg-color; 
     align-items:flex-end;
 
@@ -43,7 +44,7 @@ section {
             font-size: 22em;
             position:relative;
             right:-4vw;
-            bottom:-16vh;
+            bottom:-12vh;
             z-index:1000;
         }  
 
@@ -57,14 +58,23 @@ section {
         }
 
         a:hover{
-            border-bottom: 2px solid #f00;
-            // font-size: 1.1em;
+            border-bottom: 2px solid $button-bg-color;
         }
     } 
 
 }
 
-#content{
+#navigation-2{
+    background: #000 url('img/mrRobot.jpeg') no-repeat right; 
+}
+
+#navigation-3{
+    background: #000 url('img/darkness-as-me.jpg') no-repeat center; 
+}
+
+
+
+#content, #content-2{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +93,7 @@ section {
     }
 
     button{
-        background-color: #f00;
+        background-color: $button-bg-color;
         color:#fff;
         border:none;
         width:16vw;
@@ -105,4 +115,10 @@ section {
         text-align: center;
         color:#333;
     }
+}
+
+#content-2{
+    h1{
+        font-size:6em;
+    }    
 }
