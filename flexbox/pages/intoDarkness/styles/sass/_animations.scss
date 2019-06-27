@@ -1,0 +1,119 @@
+#root{
+    animation-name: root-animate;
+    animation-duration: 1s;
+}
+
+.navigation {
+    animation-name: background-animate;
+    animation-duration: 2s;
+
+    .paginator{
+        animation-name: image-animate;
+        animation-duration: 2s;
+
+        h1{ 
+            animation-name: number-animate;
+            animation-duration: 3s;
+        }
+    }
+}
+
+.cover-page {
+    h1 {
+        animation-name: title-animate;
+        animation-duration: 3s;
+    }
+
+    h3 {
+        animation-name: subtitle-animate;
+        animation-duration: 5s;
+    }
+
+    p {
+        animation-name: content-animate;
+        animation-duration: 7s;
+    }
+
+    button {
+        animation-name: button-animate;
+        animation-duration: 9s;
+    }
+}
+
+#content{
+    animation-name: content2-animate;
+        animation-duration: 1s;
+}
+
+@keyframes image-animate {
+    from {background-position: #fff;}
+    to {color: $primary-bg-color;}
+}
+
+@keyframes title-animate {
+    from {color: #fff;}
+    to {color: $primary-bg-color;}
+}
+
+@keyframes subtitle-animate {
+    from {color: #fff;}
+    to {color: $third-color;}
+}
+
+@keyframes content-animate {
+    from {color: #fff;}
+    to {color: #333;}
+}
+
+@keyframes button-animate {
+    from {
+        background-color: #fff;
+        color: #fff;
+    }
+    to {
+        background-color: #f00;
+        color: #fff;
+    }
+}
+
+@keyframes number-animate{
+    from{
+        right:-10vw;
+        color: #000;
+    }
+    to{   
+        right:-4vw;
+        color: #fff;
+    }
+}
+
+@keyframes background-animate{
+    from{
+       opacity:0.9;
+    }
+    to{
+        opacity:1;
+    }
+}
+
+@keyframes root-animate{
+    from{
+        position:relative;
+        left:1000px;
+    }
+    to{
+        position:relative;
+        left:0px;
+    }
+}
+
+@keyframes content2-animate{
+    from{
+        position:relative;
+        right: 1000px;
+    }
+    to{
+        position:relative;
+        right:0px;
+    }
+}

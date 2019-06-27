@@ -1,22 +1,23 @@
-$font-stack: 'Josefin Sans', sans-serif;
-$primary-bg-color:#000;
-$second-bg-color:#fff;  
-$button-bg-color:#f00;
-$third-color:rgb(138, 138, 138);
+@import '_variables';
+@import '_animations';
 
 html,
 body {
     min-height: 100%;
+    min-width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
     font-family: $font-stack;
     overflow: hidden;
+    background-color:#000;
 }
 
 #root {
     display: flex;
-    min-width: 100%;      
+    // display:none;
+    min-width: 100%;  
+    background-color:#fff;  
 }
 
 section {
@@ -27,12 +28,11 @@ section {
     display: flex;
 }
 
-#navigation, #navigation-2, #navigation-3 {
-    background: #000 url('img/darkness.jpg') no-repeat right; 
+.navigation {
     color: $second-bg-color; 
     align-items:flex-end;
 
-    .content{
+    .paginator{
         width:100%;
         align-items:flex-end;
         display: flex;
@@ -47,8 +47,6 @@ section {
             right:-4vw;
             bottom:-12vh;
             z-index:1000;
-            animation-name: number-animate;
-            animation-duration: 2s;
         }  
 
         span{
@@ -64,39 +62,38 @@ section {
             border-bottom: 2px solid $button-bg-color;
         }
     } 
-
 }
 
-#navigation-2{
+#nav-1{
+    background: #000 url('img/darkness.jpg') no-repeat right; 
+}
+
+#nav-2{
     background: #000 url('img/mrRobot.jpeg') no-repeat right; 
 }
 
-#navigation-3{
+#nav-3{
     background: #000 url('img/darkness-as-me.jpg') no-repeat center; 
 }
 
-
-
-#content, #content-2, #content-3{
+.cover-page{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top:16vh;
+    background-color: #fff;
+    z-index:1001;
 
     h1{
-        font-size:6.5em;
+        font-size:6em;
         padding:0;
         margin:0;
-        animation-name: title-animate;
-        animation-duration: 2s;
     }
 
     h3{
         color:$third-color;
         padding:0;
         margin:0;
-        animation-name: subtitle-animate;
-        animation-duration: 3s;
     }
 
     button{
@@ -109,8 +106,6 @@ section {
         font-size:1.2em;
         transition: width 0.2s, background-color 0.2s;
         transition-timing-function: ease;
-        animation-name: button-animate;
-        animation-duration: 5s;
     }
 
     button:hover{
@@ -125,9 +120,7 @@ section {
         padding:5vw;
         font-size:1.5em;
         text-align: center;
-        color:#333;
-        animation-name: content-animate;
-        animation-duration: 4s;
+        color:#333; 
     }
 
     #home{
@@ -144,43 +137,89 @@ section {
     }
 }
 
-#content-2{
-    h1{
-        font-size:6em;
-    }    
-}
+#content{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+    justify-content: center;
+    min-width: 100%;
+    z-index: 2000;
+    position:relative;
+    background-color: #fff;
 
-@keyframes title-animate {
-    from {color: #fff;}
-    to {color: $primary-bg-color;}
-}
+    section{
+        margin: 0;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;   
+            // max-width: 50% !important;
+            // width:50%;     
 
-@keyframes subtitle-animate {
-    from {color: #fff;}
-    to {color: $third-color;}
-}
+        h1{
+            font-size:3em;
+            margin: 0;
+        padding: 0;
+        }
 
-@keyframes content-animate {
-    from {color: #fff;}
-    to {color: #333;}
-}
+        h3{
+            color:#666;
+            margin-bottom: 5vh;
+        }
 
-@keyframes button-animate {
-    from {
-        background-color: #fff;
-        color: #fff;
+        p{
+            text-align: justify;
+            padding: 0 25vh;
+        }
     }
-    to {
-        background-color: #f00;
-        color: #fff;
+
+    .content-page{
+        max-width: 75% !important;
+        width:75%;
+        padding: 0 10vh;
+        margin-bottom: 10vh;
+
+        a{
+            text-decoration: none;
+            color:#000;
+            position: absolute;
+            bottom:10vh;
+        }
+
+        a:hover{
+            border-bottom:2px solid #f00;
+        }
+    }
+
+    .navigation-content{
+        width:25%;
+        height: 100%;
+        color: $second-bg-color; 
+        align-items:flex-end;
+        flex-direction: row;
+        justify-content:space-between;
+
+        .number-content{    
+            padding:0;
+            margin:0; 
+            font-size: 16em;
+            position:relative;
+            z-index:1000;
+            // bottom:0px;
+        } 
+
+        span{
+            position:relative;
+            bottom:0px;
+        }
+
+        a{
+            color:#fff;
+            text-decoration: none;
+        }
+
+        a:hover{
+            border-bottom: 2px solid $button-bg-color;
+        }
     }
 }
 
-@keyframes number-animate{
-    from{
-        right:-20vw;
-    }
-    to{
-        right:-4vw;
-    }
-}
